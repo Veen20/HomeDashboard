@@ -135,7 +135,7 @@ if st.sidebar.button("ℹ️ Tentang"):
 st.markdown("""
 <div class="top-right-logos">
     <img src="logo unsri.png">
-    <img src="logo samsat.png">
+    <img src="https://github.com/Veen20/HomeDashboard/blob/main/logo%20samsat.png">
     <img src="logo fasilkom.png">
         
 </div>
