@@ -57,7 +57,7 @@ button:hover {
 # Logo kiri atas + judul
 col1, col2 = st.columns([1, 8])
 with col1:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Logo_of_University.svg/120px-Logo_of_University.svg.png", width=80)  # ganti dengan logo tim/universitas kamu
+    st.image("C:\Users\peni ilhami\OneDrive\Desktop\LOGO UNSRI.png", width=80)  # ganti dengan logo tim/universitas kamu
 with col2:
     st.markdown("""
         <h1 style='margin-top:15px;'>🎉 Portal Multi-Dashboard</h1>
