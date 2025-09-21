@@ -10,28 +10,23 @@ st.set_page_config(
 # CSS kustom
 st.markdown("""
 <style>
-/* Background animasi gradient */
-body {
-    background: linear-gradient(-45deg, #FFF176, #FFB74D, #FFD700, #FF8A65);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-}
-@keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+/* Background gambar Samsat */
+.stApp {
+    background: url("https://raw.githubusercontent.com/username/HomeDashboard/main/assets/samsat-bg.png");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Judul utama */
 h1 {
-    color: #333;
+    color: #fff;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
 /* Tombol dashboard */
 button {
-    background-color: #FFD700;
+    background-color: rgba(255, 215, 0, 0.9);
     color: black;
     padding: 15px 25px;
     font-size: 18px;
@@ -43,24 +38,22 @@ button {
     transition: all 0.3s ease;
 }
 button:hover {
-    background-color: #FFA500;
+    background-color: rgba(255, 165, 0, 0.95);
     transform: scale(1.05);
 }
 
 /* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: #FFF9E6;
+    background-color: rgba(255, 249, 230, 0.9);
 }
 </style>
 """, unsafe_allow_html=True)
 
+
 # Logo kiri atas + judul
-col1, col1., col2 = st.columns([1, 8])
+col1, col2 = st.columns([1, 8])
 with col1:
     st.image("LOGO UNSRI.png", width=80)  # ganti dengan logo tim/universitas kamu
-with col1.:
-    st.image("LOGO UNSRI.png", width=80)  # ganti dengan logo tim/universitas kamu
-    
 with col2:
     st.markdown("""
         <h1 style='margin-top:15px;'>🎉 Portal Multi-Dashboard</h1>
