@@ -55,9 +55,12 @@ button:hover {
 """, unsafe_allow_html=True)
 
 # Logo kiri atas + judul
-col1, col2 = st.columns([1, 8])
+col1, col1., col2 = st.columns([1, 8])
 with col1:
     st.image("LOGO UNSRI.png", width=80)  # ganti dengan logo tim/universitas kamu
+with col1.:
+    st.image("LOGO UNSRI.png", width=80)  # ganti dengan logo tim/universitas kamu
+    
 with col2:
     st.markdown("""
         <h1 style='margin-top:15px;'>🎉 Portal Multi-Dashboard</h1>
