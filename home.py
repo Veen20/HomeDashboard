@@ -109,7 +109,7 @@ Setiap dashboard akan terbuka di tab baru.
 # Dashboard + ikon + tooltip (hanya 4)
 dashboards = {
     "🚗 Analisis Sentimen Samsat": {
-        "url": "https://dashboard-ndkjpx2acq4tqkxlrhbuao.streamlit.app/#dashboard-analisis-sentimen-ulasan-publik-samsat-uptb-palembang-1",
+        "url": "http1",
         "tooltip": "Lihat pendapat masyarakat tentang layanan Samsat"
     },
     "📊 Data Statistik": {
