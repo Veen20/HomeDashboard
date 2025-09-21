@@ -12,7 +12,7 @@ st.markdown("""
 <style>
 /* Background gambar Samsat */
 html, body, .stApp {
-    background: url("OIP.webp");
+    background: url("https://github.com/Veen20/HomeDashboard/blob/main/OIP.webp?raw=true");
     background-size: cover;
     background-attachment: fixed;
 }
