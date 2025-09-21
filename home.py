@@ -11,7 +11,7 @@ st.set_page_config(
 st.markdown("""
 <style>
 /* Background gambar Samsat */
-.stApp {
+html, body, .stApp {
     background: url("OIP.webp");
     background-size: cover;
     background-attachment: fixed;
