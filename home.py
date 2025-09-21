@@ -108,19 +108,19 @@ Setiap dashboard akan terbuka di tab baru.
 
 # Dashboard + ikon + tooltip (hanya 4)
 dashboards = {
-    "🚗 Analisis Sentimen Samsat": {
+    "🚗 Analisis Sentimen Ulasan Gmaps (PENI ILHAMI CUTE)": {
         "url": "http1",
         "tooltip": "Lihat pendapat masyarakat tentang layanan Samsat"
     },
-    "📊 Data Statistik": {
+    "📊 ulasan play store ": {
         "url": "https://dashboard2.streamlit.app",
         "tooltip": "Tampilan data dalam bentuk tabel dan grafik sederhana"
     },
-    "📈 Pertumbuhan & Tren": {
+    "📈 ulasan youtube": {
         "url": "https://dashboard3.streamlit.app",
         "tooltip": "Visualisasi tren pertumbuhan data"
     },
-    "🛠️ Monitoring Sistem": {
+    "🛠️ Gabungan": {
         "url": "https://dashboard4.streamlit.app",
         "tooltip": "Pantau status dan kinerja sistem secara langsung"
     }
