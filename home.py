@@ -137,7 +137,7 @@ st.markdown("""
     <img src="logo unsri.png">
     <img src="logo samsat.png">
     <img src="logo fasilkom.png">
-    st.image("logo_fasilkom.png", width=100)
+    st.image("logo fasilkom.png", width=100)
 
     
 </div>
