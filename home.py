@@ -92,8 +92,6 @@ with col2:
     st.markdown("""
         <div class="title-box">
             <h1>🎉 Portal Analisis Sentimen Samsat UPTB Palembang 1</h1>
-           <div class="title-box">
-            <h1>🎉 Portal Analisis Sentimen UPTB Samsat Palembang 1</h1>
             <p>Portal ini menyajikan berbagai dashboard dari tim kami yang menganalisis ulasan masyarakat terhadap layanan Samsat Palembang 1.</p>
             <p>Setiap dashboard menggunakan sumber berbeda: Google Maps, Playstore, YouTube, dan gabungan GMaps & Playstore.</p>
             <p><b>Pilih salah satu dashboard di bawah untuk melihat hasil analisis secara lebih detail.</b></p>
