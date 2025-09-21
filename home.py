@@ -19,19 +19,29 @@ st.markdown("""
     background-position: center top;
 }
 
+/* Container judul */
+.title-box {
+    background: rgba(0,0,0,0.6);
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 /* Judul utama */
-h1 {
+.title-box h1 {
     color: #FFD700;
     font-weight: bold;
-    text-align: center;
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
-    font-size: 40px;
-    margin-bottom: 10px;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
+    font-size: 42px;
+    margin-bottom: 8px;
 }
-p {
-    text-align: center;
+
+/* Subjudul */
+.title-box p {
     font-size: 18px;
     color: #f1f1f1;
+    margin: 0;
 }
 
 /* Tombol dashboard */
@@ -57,51 +67,62 @@ button:hover {
 [data-testid="stSidebar"] {
     background-color: rgba(255, 249, 230, 0.95);
     border-right: 2px solid #FFD700;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 /* Footer */
 .footer {
     text-align:center;
-    color:#ddd;
+    color:#eee;
     font-size:14px;
     padding:12px;
     border-radius:8px;
     margin-top:30px;
+    background: rgba(0,0,0,0.5);
 }
 </style>
 """, unsafe_allow_html=True)
 
-# Logo kiri atas + judul
+# Logo + Judul
 col1, col2 = st.columns([1, 8])
 with col1:
     st.image("LOGO UNSRI.png", width=90)
 with col2:
-    st.markdown("<h1>🎉 Portal Multi-Dashboard</h1>", unsafe_allow_html=True)
-    st.markdown("<p>Klik tombol di bawah untuk membuka dashboard masing-masing tim</p>", unsafe_allow_html=True)
+    st.markdown("""
+        <div class="title-box">
+            <h1>🎉 Portal Multi-Dashboard</h1>
+            <p>Pilih salah satu dashboard di bawah ini untuk melihat data dan informasi dengan mudah</p>
+        </div>
+    """, unsafe_allow_html=True)
 
 st.markdown("---")
 
 # Sidebar
 st.sidebar.title("📂 Menu Dashboard")
-st.sidebar.info("Gunakan menu ini untuk akses cepat ke tiap dashboard.")
+st.sidebar.write("""
+Portal ini berisi beberapa dashboard yang dibuat oleh tim.  
+Gunakan menu atau tombol di halaman utama untuk membuka dashboard.  
+Setiap dashboard akan terbuka di tab baru.
+""")
 
 # Dashboard + ikon + tooltip (hanya 4)
 dashboards = {
-    "🚗 Dashboard 1 (Peni)": {
+    "🚗 Analisis Sentimen Samsat": {
         "url": "https://dashboard-ndkjpx2acq4tqkxlrhbuao.streamlit.app/#dashboard-analisis-sentimen-ulasan-publik-samsat-uptb-palembang-1",
-        "tooltip": "Analisis Sentimen Ulasan Publik Samsat"
+        "tooltip": "Lihat pendapat masyarakat tentang layanan Samsat"
     },
-    "📊 Dashboard 2 (Teman 1)": {
+    "📊 Data Statistik": {
         "url": "https://dashboard2.streamlit.app",
-        "tooltip": "Dashboard Data Statistik"
+        "tooltip": "Tampilan data dalam bentuk tabel dan grafik sederhana"
     },
-    "📈 Dashboard 3 (Teman 2)": {
+    "📈 Pertumbuhan & Tren": {
         "url": "https://dashboard3.streamlit.app",
-        "tooltip": "Visualisasi Pertumbuhan"
+        "tooltip": "Visualisasi tren pertumbuhan data"
     },
-    "🛠️ Dashboard 4 (Teman 3)": {
+    "🛠️ Monitoring Sistem": {
         "url": "https://dashboard4.streamlit.app",
-        "tooltip": "Monitoring Sistem & Tools"
+        "tooltip": "Pantau status dan kinerja sistem secara langsung"
     }
 }
 
