@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit as st
 
 # Atur layout dan title
 st.set_page_config(
@@ -11,63 +10,69 @@ st.set_page_config(
 # CSS kustom
 st.markdown("""
 <style>
-/* Background gambar Samsat dengan overlay gelap */
-.stApp {
-    background: linear-gradient(rgba(10,10,30,0.75), rgba(10,10,30,0.85)),
-                url("https://raw.githubusercontent.com/Veen20/HomeDashboard/main/OIP.webp");
+/* Background gambar Samsat */
+html, body, .stApp {
+    background: url("https://github.com/Veen20/HomeDashboard/blob/main/OIP.webp?raw=true");
     background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-position: center top;
+    color: #f8f9fa; /* teks default terang */
+}
+
+/* Overlay gelap tipis biar teks lebih kebaca */
+.stApp::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45); /* transparansi hitam */
+    z-index: -1;
 }
 
 /* Judul utama */
 h1 {
-    color: #FFD700;
+    color: #ffd700; /* emas */
     font-weight: bold;
-    text-align: center;
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
-    font-size: 40px;
-    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
 }
-p {
-    text-align: center;
+
+/* Subjudul */
+.subtitle {
     font-size: 18px;
-    color: #f1f1f1;
+    color: #ffffff;
+    padding: 8px 15px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    display: inline-block;
 }
 
 /* Tombol dashboard */
 button {
-    background: linear-gradient(135deg, #FFD700, #FFA500);
-    color: #222;
-    padding: 18px 30px;
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    color: black;
+    padding: 15px 25px;
     font-size: 18px;
     font-weight: bold;
     border: none;
-    border-radius: 14px;
+    border-radius: 15px;
     cursor: pointer;
-    box-shadow: 2px 4px 12px rgba(0,0,0,0.3);
-    transition: all 0.3s ease-in-out;
-    width: 90%;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.35);
+    transition: all 0.3s ease;
 }
 button:hover {
-    background: linear-gradient(135deg, #FFA500, #FFD700);
-    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(135deg, #ffdb4d, #ff6600);
+    transform: scale(1.07);
 }
 
 /* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: rgba(255, 249, 230, 0.95);
-    border-right: 2px solid #FFD700;
-}
-
-/* Footer */
-.footer {
-    text-align:center;
-    color:#ddd;
-    font-size:14px;
-    padding:12px;
-    border-radius:8px;
-    margin-top:30px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 }
 </style>
 """, unsafe_allow_html=True)
@@ -75,18 +80,20 @@ button:hover {
 # Logo kiri atas + judul
 col1, col2 = st.columns([1, 8])
 with col1:
-    st.image("LOGO UNSRI.png", width=90)
+    st.image("LOGO UNSRI.png", width=80)  # ganti dengan logo tim/universitas kamu
 with col2:
-    st.markdown("<h1>🎉 Portal Multi-Dashboard</h1>", unsafe_allow_html=True)
-    st.markdown("<p>Klik tombol di bawah untuk membuka dashboard masing-masing tim</p>", unsafe_allow_html=True)
+    st.markdown("""
+        <h1 style='margin-top:15px;'>🎉 Portal Multi-Dashboard</h1>
+        <p class='subtitle'>Klik tombol di bawah untuk membuka dashboard masing-masing tim</p>
+    """, unsafe_allow_html=True)
 
 st.markdown("---")
 
 # Sidebar
 st.sidebar.title("📂 Menu Dashboard")
-st.sidebar.info("Gunakan menu ini untuk akses cepat ke tiap dashboard.")
+st.sidebar.info("Pilih dashboard yang ingin dibuka dengan cepat lewat menu ini.")
 
-# Dashboard + ikon + tooltip (hanya 4)
+# Dashboard + ikon + tooltip
 dashboards = {
     "🚗 Dashboard 1 (Peni)": {
         "url": "https://dashboard-ndkjpx2acq4tqkxlrhbuao.streamlit.app/#dashboard-analisis-sentimen-ulasan-publik-samsat-uptb-palembang-1",
@@ -113,7 +120,7 @@ for name, info in dashboards.items():
     with cols[i % 2]:
         st.markdown(
             f"""
-            <div style='text-align:center; margin:20px'>
+            <div style='text-align:center; margin:15px'>
                 <a href='{info["url"]}' target='_blank' title='{info["tooltip"]}'>
                     <button>{name}</button>
                 </a>
@@ -122,4 +129,9 @@ for name, info in dashboards.items():
         )
     i += 1
 
-st.markdown("<div class='footer'>🌟 Semua dashboard berjalan mandiri. Klik tombol untuk membuka di tab baru.</div>", unsafe_allow_html=True)
+st.markdown("---")
+st.markdown("""
+<div style='text-align:center; color:white; font-size:14px; background:rgba(0,0,0,0.6); padding:10px; border-radius:8px;'>
+    🌟 Semua dashboard berjalan mandiri. Klik tombol untuk membuka di tab baru.
+</div>
+""", unsafe_allow_html=True)
