@@ -12,7 +12,7 @@ st.markdown("""
 <style>
 /* Background gambar Samsat */
 .stApp {
-    background: url("https://github.com/Veen20/HomeDashboard/blob/main/LOGO%20UNSRI.png");
+    background: url("OIP.webp");
     background-size: cover;
     background-attachment: fixed;
 }
