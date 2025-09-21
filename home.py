@@ -139,7 +139,7 @@ st.markdown("""
     <img src="logo fasilkom.png">
         
 </div>
-
+""", unsafe_allow_html=True)
 
 # ==============================
 # Halaman Utama
