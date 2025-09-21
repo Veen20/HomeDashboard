@@ -13,9 +13,10 @@ st.markdown("""
 /* Background gambar Samsat */
 html, body, .stApp {
     background: url("https://github.com/Veen20/HomeDashboard/blob/main/OIP.webp?raw=true");
-    background-size: 50%;  /* Gambar jadi setengah layar */
-    background-repeat: no-repeat; /* Supaya tidak diulang */
-    background-position: center top; /* Posisi gambar */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
 
 /* Judul utama */
 h1 {
