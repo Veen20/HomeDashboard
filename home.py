@@ -136,9 +136,10 @@ st.markdown("""
 <div class="top-right-logos">
     <img src="logo unsri.png">
     <img src="logo samsat.png">
-     <img src="logo samsat.png">
-    st.image("logo fasilkom.png")
+    <img src="logo fasilkom.png">
+    
 </div>
+
 """, unsafe_allow_html=True)
 
 # ==============================
