@@ -137,20 +137,9 @@ st.markdown("""
     <img src="logo unsri.png">
     <img src="logo samsat.png">
     <img src="logo fasilkom.png">
-    st.image("logo fasilkom.png", width=100)
-
-    
+        
 </div>
-col1, col2, col3 = st.columns(3)
 
-with col1:
-    st.image("logo unsri.png", width=80)
-with col2:
-    st.image("logo samsat.png", width=80)
-with col3:
-    st.image("logo fasilkom.png", width=80)
-
-""", unsafe_allow_html=True)
 
 # ==============================
 # Halaman Utama
