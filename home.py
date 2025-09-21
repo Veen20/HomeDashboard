@@ -134,7 +134,7 @@ if st.sidebar.button("ℹ️ Tentang"):
 # ==============================
 st.markdown("""
 <div class="top-right-logos">
-    <img src="LOGO UNSRI.png">
+    <img src="logo unsri.png">
     <img src="logo samsat.png">
     <img src="logo fasilkom.png">
 </div>
