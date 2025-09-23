@@ -349,34 +349,33 @@ if st.sidebar.button("🏠 Halaman Utama"):
 if st.sidebar.button("ℹ️ Tentang"):
     st.session_state["page"] = "about"
 
+
 # ==============================
 # Halaman Utama
 # ==============================
 if st.session_state["page"] == "home":
-    col1, col2, col3 = st.columns([1, 6, 2])  # kiri, judul, kanan
-    
-    # Logo kiri (Unsri)
-    with col1:
-        st.image("logo unsri.png", width=100)
-    
-    # Judul
+    # Baris logo (tengah atas)
+    col1, col2, col3, col4, col5 = st.columns([2,1,1,1,2])
     with col2:
-        st.markdown("""
-            <div class="title-box">
-                <h1>Portal Analisis Sentimen Samsat UPTB Palembang 1</h1>
-                <p><b>Pilih salah satu dashboard di bawah untuk melihat hasil analisis secara lebih detail.</b></p>
-            </div>
-        """, unsafe_allow_html=True)
-    
-    # Logo kanan (2 logo sejajar)
+        st.image("logo unsri.png", width=120)
     with col3:
-        colR1, colR2 = st.columns(2)
-        with colR1:
-            st.image("logo samsat.png", width=80)
-        with colR2:
-            st.image("logo fasilkom.png", width=80)
+        st.image("logo samsat.png", width=120)
+    with col4:
+        st.image("logo fasilkom.png", width=120)
+
+    # Spasi sedikit
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Judul + deskripsi (posisi di bawah logo)
+    st.markdown("""
+        <div class="title-box">
+            <h1>Portal Analisis Sentimen Samsat UPTB Palembang 1</h1>
+            <p><b>Pilih salah satu dashboard di bawah untuk melihat hasil analisis secara lebih detail.</b></p>
+        </div>
+    """, unsafe_allow_html=True)
 
     st.markdown("---")
+
 
     dashboards = {
         "<i class='fas fa-map-marked-alt'></i> Ulasan Google Maps": {
