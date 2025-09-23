@@ -433,7 +433,7 @@ elif st.session_state["page"] == "about":
     st.write("- **Dibuat oleh**: Tim Pengembang Fasilkom Unsri")
 
     st.markdown("### <i class='material-icons'>apartment</i> Identitas Instansi", unsafe_allow_html=True)
-    col1, col2, col3, col4, col5 = st.columns([1,2,2,3,1])
+    col1, col2, col3, col4, col5 = st.columns([1,2,2,3,3])
     with col1:
         st.image("logo unsri.png", caption="Universitas Sriwijaya", width=120)
     with col2:
