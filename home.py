@@ -163,14 +163,17 @@ if st.session_state["page"] == "home":
             "url": "https://dashboard1.streamlit.app",
             "tooltip": "Lihat pendapat masyarakat tentang layanan Samsat"
         },
-        "<i class='fab fa-google-play'></i> Ulasan Play Store": {
-            "url": "https://e4ca85lwpgeyxjmxjjab7f.streamlit.app/",
-            "tooltip": "Tampilan data ulasan aplikasi di Play Store"
-        },
         "<i class='fab fa-youtube'></i> Ulasan YouTube": {
             "url": "https://dashboard3.streamlit.app",
             "tooltip": "Analisis komentar & sentimen di YouTube"
         },
+        "<i class='fab fa-google-play'></i> Ulasan Gmaps & Play Store": {
+            "url": "https://e4ca85lwpgeyxjmxjjab7f.streamlit.app/",
+            "tooltip": "Tampilan data ulasan aplikasi di Gmaps & Play Store"
+        },
+        "<i class='fab fa-google-play'></i> Ulasan Play Store": {
+            "url": "https://e4ca85lwpgeyxjmxjjab7f.streamlit.app/",
+            "tooltip": "Tampilan data ulasan aplikasi di Play Store"
         "<i class='fas fa-chart-pie'></i> Gabungan": {
             "url": "https://dashboard4.streamlit.app",
             "tooltip": "Kombinasi analisis semua platform"
@@ -222,7 +225,15 @@ elif st.session_state["page"] == "about":
     with col3:
         st.image("logo fasilkom.png", caption="Fasilkom Unsri", use_container_width=True)
 
-    st.write("### 👨‍💻 Tim Pengembang")
-    st.write("- Nama 1")
-    st.write("- Nama 2")
-    st.write("- Nama 3")
+   st.markdown("### <i class='material-icons'>people</i> Tim Pengembang", unsafe_allow_html=True)
+    st.write("Aplikasi ini dikembangkan oleh tim mahasiswa dari Fakultas Ilmu Komputer Universitas Sriwijaya, sebagai bagian dari program magang dan kerja praktek.")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.write("- Peni Ilhami (Mahasiswa Fasilkom Unsri)")
+        st.write("- Nensi Fitriyanti (Mahasiswa Fasilkom Unsri)")
+
+    with col2:
+        st.write("")
+        st.write("- Resta Gustina (Mahasiswa Fasilkom Unsri)")
+        st.write("- Dhea Andheby Saputri (Mahasiswa Fasilkom Unsri)")
+
