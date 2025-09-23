@@ -422,46 +422,32 @@ if st.session_state["page"] == "home":
 elif st.session_state["page"] == "about":
     st.markdown("""
         <div class="title-box">
-            <h1><i class="fas fa-info-circle"></i> Tentang Aplikasi</h1>
+            <h1><i class="material-icons">info</i> Tentang Aplikasi</h1>
             <p>Informasi mengenai aplikasi ini, tim pengembang, dan instansi terkait.</p>
         </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("### <i class='fas fa-building'></i> Identitas Instansi", unsafe_allow_html=True)
-        
-        # Baris logo
-    col1, col2, col3 = st.columns(3)   
-    with col1:
-        st.image("logo unsri.png", width=120)
-    with col2:
-        st.image("logo samsat.png", width=120)
-    with col3:
-        st.image("logo fasilkom.png", width=120)
-        
-        # Baris label di bawah logo
-    col_html = """
-        <div style='display: flex; justify-content: center; gap: 180px; align-items: center; margin-top: -10px;'>
-            <div style='text-align: center;'>
-                <p>Universitas Sriwijaya</p>
-            </div>
-            <div style='text-align: center;'>
-                <p>Samsat UPTB Palembang 1</p>
-            </div>
-            <div style='text-align: center;'>
-                <p>Fasilkom Unsri</p>
-            </div>
-        </div>
-        """
-    st.markdown(col_html, unsafe_allow_html=True)
+    st.markdown("### <i class='material-icons'>apps</i> Identitas Aplikasi", unsafe_allow_html=True)
+    st.write("- **Nama**: Portal Analisis Sentimen Samsat UPTB Palembang 1")
+    st.write("- **Versi**: 1.0")
+    st.write("- **Dibuat oleh**: Tim Pengembang Fasilkom Unsri")
 
-    st.markdown("### <i class='fas fa-users'></i> Tim Pengembang", unsafe_allow_html=True)
+    st.markdown("### <i class='material-icons'>apartment</i> Identitas Instansi", unsafe_allow_html=True)
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.image("logo unsri.png", caption="Universitas Sriwijaya", width=120)
+    with col2:
+        st.image("logo samsat.png", caption="Samsat UPTB Palembang 1", width=120)
+    with col3:
+        st.image("logo fasilkom.png", caption="Fasilkom Unsri", width=120)
+
+    st.markdown("### <i class='material-icons'>people</i> Tim Pengembang", unsafe_allow_html=True)
     st.write("Aplikasi ini dikembangkan oleh tim mahasiswa dari Fakultas Ilmu Komputer Universitas Sriwijaya, sebagai bagian dari program magang dan kerja praktek.")
     col1, col2 = st.columns(2)
     with col1:
         st.write("- Peni Ilhami (Mahasiswa Fasilkom Unsri)")
         st.write("- Nensi Fitriyanti (Mahasiswa Fasilkom Unsri)")
+
     with col2:
         st.write("- Resta Gustina (Mahasiswa Fasilkom Unsri)")
         st.write("- Dhea Andheby Saputri (Mahasiswa Fasilkom Unsri)")
-
-
