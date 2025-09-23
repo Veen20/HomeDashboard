@@ -160,7 +160,7 @@
 
 #     dashboards = {
 #         "<i class='fas fa-map-marked-alt'></i> Ulasan Google Maps": {
-#             "url": "https://dashboard1.streamlit.app",
+#             "url": "https://dashboard-ndkjpx2acq4tqkxlrhbuao.streamlit.app/",
 #             "tooltip": "Lihat pendapat masyarakat tentang layanan Samsat"
 #         },
 #         "<i class='fab fa-youtube'></i> Ulasan YouTube": {
