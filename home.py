@@ -434,22 +434,25 @@ elif st.session_state["page"] == "about":
 
     st.markdown("### <i class='fas fa-building'></i> Identitas Instansi", unsafe_allow_html=True)
     st.markdown("""
-    <div style='display: flex; justify-content: center; gap: 40px; align-items: center; margin-top: 20px;'>
-        <div style='text-align: center;'>
-            <img src='logo unsri.png' width='120'><br>
-            <p>Universitas Sriwijaya</p>
+    col_html = """
+        <div style='display: flex; justify-content: center; gap: 40px; align-items: center; margin-top: 20px;'>
+            <div style='text-align: center;'>
+                <p>Universitas Sriwijaya</p>
+            </div>
+            <div style='text-align: center;'>
+                <p>Samsat UPTB Palembang 1</p>
+            </div>
+            <div style='text-align: center;'>
+                <p>Fasilkom Unsri</p>
+            </div>
         </div>
-        <div style='text-align: center;'>
-            <img src='logo samsat.png' width='120'><br>
-            <p>Samsat UPTB Palembang 1</p>
-        </div>
-        <div style='text-align: center;'>
-            <img src='logo fasilkom.png' width='120'><br>
-            <p>Fasilkom Unsri</p>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+        """
+        st.image("logo unsri.png", width=120)
+        st.image("logo samsat.png", width=120)
+        st.image("logo fasilkom.png", width=120)
+        st.markdown(col_html, unsafe_allow_html=True)
 
+   
     st.markdown("### <i class='fas fa-users'></i> Tim Pengembang", unsafe_allow_html=True)
     st.write("Aplikasi ini dikembangkan oleh tim mahasiswa dari Fakultas Ilmu Komputer Universitas Sriwijaya, sebagai bagian dari program magang dan kerja praktek.")
     col1, col2 = st.columns(2)
