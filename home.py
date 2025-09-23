@@ -423,42 +423,99 @@ if st.session_state["page"] == "home":
         unsafe_allow_html=True
     )
 
+import streamlit as st
+
 # ==============================
-# Halaman Tentang
+# CSS untuk logo pojok kanan & grid tim
 # ==============================
-elif st.session_state["page"] == "about":
-    st.markdown("""
-        <div class="title-box">
-            <h1>ℹ️ Tentang Aplikasi</h1>
-            <p>Aplikasi ini dikembangkan untuk menyajikan hasil analisis sentimen dari berbagai platform 
-            terkait layanan Samsat UPTB Palembang 1 secara interaktif dan informatif.</p>
-        </div>
-    """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+.top-right-logos {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.top-right-logos img {
+    height: 60px;
+    margin-left: 10px;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+.team-member {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+</style>
+<div class="top-right-logos">
+    <img src="logo unsri.png">
+    <img src="logo samsat.png">
+    <img src="logo fasilkom.png">
+</div>
+""", unsafe_allow_html=True)
 
-    # Identitas aplikasi
-    st.write("### 📌 Identitas Aplikasi")
-    st.markdown("""
-    - **Nama** : Portal Analisis Sentimen Samsat UPTB Palembang 1  
-    - **Versi** : 1.0  
-    - **Dibuat oleh** : Tim Pengembang Fakultas Ilmu Komputer Universitas Sriwijaya  
-    """)
+# ==============================
+# Judul Halaman Tentang
+# ==============================
+st.title("📌 Tentang Aplikasi")
 
-    # Identitas instansi
-    st.write("### 🏢 Identitas Instansi")
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.image("logo unsri.png", caption="Universitas Sriwijaya", use_container_width=True)
-    with col2:
-        st.image("logo samsat.png", caption="Samsat UPTB Palembang 1", use_container_width=True)
-    with col3:
-        st.image("logo fasilkom.png", caption="Fakultas Ilmu Komputer", use_container_width=True)
+# ==============================
+# Deskripsi Singkat
+# ==============================
+st.markdown("""
+Portal **Analisis Sentimen Samsat UPTB Palembang 1** ini dikembangkan untuk
+mengidentifikasi opini masyarakat terkait pelayanan Samsat melalui data dari
+platform digital seperti **Google Maps, Play Store, dan YouTube**.  
+Hasil analisis diharapkan dapat membantu instansi dalam **meningkatkan kualitas
+layanan publik**.
+""")
 
-    # Tim pengembang
-    st.write("### 👨‍💻 Tim Pengembang")
-    st.markdown("""
-    - **Nama 1** – Data Processing  
-    - **Nama 2** – Backend & Deployment  
-    - **Nama 3** – UI/UX & Dokumentasi  
-    - **Nama 4** – Koordinator Proyek  
-    """)
+# ==============================
+# Informasi Aplikasi
+# ==============================
+st.subheader("🏢 Identitas Aplikasi")
+st.markdown("""
+| Item                | Keterangan |
+|---------------------|------------|
+| **Nama Aplikasi**   | Portal Analisis Sentimen Samsat UPTB Palembang 1 |
+| **Versi**           | 1.0 |
+| **Dibuat Oleh**     | Tim Pengembang Fakultas Ilmu Komputer, Universitas Sriwijaya |
+""")
+
+# ==============================
+# Tim Pengembang
+# ==============================
+st.subheader("👨‍💻 Tim Pengembang")
+
+st.markdown("""
+<div class="team-grid">
+    <div class="team-member">
+        <b>Nama 1</b><br>
+        Data Processing
+    </div>
+    <div class="team-member">
+        <b>Nama 2</b><br>
+        Backend & Deployment
+    </div>
+    <div class="team-member">
+        <b>Nama 3</b><br>
+        UI/UX & Dokumentasi
+    </div>
+    <div class="team-member">
+        <b>Nama 4</b><br>
+        Koordinator Proyek
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# ==============================
+# Footer
+# ==============================
+st.markdown("---")
+st.caption("© 2025 Fakultas Ilmu Komputer, Universitas Sriwijaya. Dikembangkan untuk mendukung inovasi pelayanan publik di Samsat.")
 
