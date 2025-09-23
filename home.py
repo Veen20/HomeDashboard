@@ -446,7 +446,7 @@ elif st.session_state["page"] == "about":
                 <p>Fasilkom Unsri</p>
             </div>
         </div>
-        """
+        """, unsafe_allow_html=True)
         st.image("logo unsri.png", width=120)
         st.image("logo samsat.png", width=120)
         st.image("logo fasilkom.png", width=120)
