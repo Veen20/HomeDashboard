@@ -455,6 +455,8 @@ if st.session_state["page"] == "home":
 # ==============================
 # Halaman Tentang
 # ==============================
+import streamlit as st
+
 # Import Material Icons agar bisa tampil sebagai ikon
 st.markdown(
     """
@@ -463,7 +465,13 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-elif st.session_state["page"] == "about":
+# Pastikan key "page" ada
+if "page" not in st.session_state:
+    st.session_state["page"] = "home"
+
+# Halaman About
+if st.session_state["page"] == "about":
+    # Judul halaman dengan ikon
     st.markdown("""
         <div class="title-box">
             <h1><i class="material-icons">info</i> Tentang Aplikasi</h1>
@@ -471,11 +479,13 @@ elif st.session_state["page"] == "about":
         </div>
     """, unsafe_allow_html=True)
 
+    # Identitas Aplikasi
     st.markdown("### <i class='material-icons'>apps</i> Identitas Aplikasi", unsafe_allow_html=True)
     st.write("- **Nama**: Portal Analisis Sentimen Samsat UPTB Palembang 1")
     st.write("- **Versi**: 1.0")
     st.write("- **Dibuat oleh**: Tim Pengembang Fasilkom Unsri")
 
+    # Identitas Instansi
     st.markdown("### <i class='material-icons'>apartment</i> Identitas Instansi", unsafe_allow_html=True)
     col1, col2, col3, col4, col5 = st.columns([2,2,2,3,1])
     with col1:
@@ -485,13 +495,13 @@ elif st.session_state["page"] == "about":
     with col3:
         st.image("logo fasilkom.png", caption="Fasilkom Unsri", width=120)
 
+    # Tim Pengembang
     st.markdown("### <i class='material-icons'>people</i> Tim Pengembang", unsafe_allow_html=True)
     st.write("Aplikasi ini dikembangkan oleh tim mahasiswa dari Fakultas Ilmu Komputer Universitas Sriwijaya, sebagai bagian dari program magang dan kerja praktek.")
     col1, col2 = st.columns(2)
     with col1:
         st.write("- Peni Ilhami (Mahasiswa Fasilkom Unsri)")
         st.write("- Nensi Fitriyanti (Mahasiswa Fasilkom Unsri)")
-
     with col2:
         st.write("- Resta Gustina (Mahasiswa Fasilkom Unsri)")
         st.write("- Dhea Andheby Saputri (Mahasiswa Fasilkom Unsri)")
