@@ -391,7 +391,7 @@ if st.session_state["page"] == "home":
             "tooltip": "Tampilan data ulasan aplikasi di Gmaps & Play Store"
         },
         "<i class='fab fa-google-play'></i> Ulasan Play Store": {
-            "url": "https://e4ca85lwpgeyxjmxjjab7f.streamlit.app/",
+            "url": "https://dashboardsentimen1-rjltpyvvw8jwxsqr5tnraa.streamlit.app/",
             "tooltip": "Tampilan data ulasan aplikasi di Play Store"
         }
     }
