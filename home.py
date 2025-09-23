@@ -174,6 +174,7 @@ if st.session_state["page"] == "home":
         "<i class='fab fa-google-play'></i> Ulasan Play Store": {
             "url": "https://e4ca85lwpgeyxjmxjjab7f.streamlit.app/",
             "tooltip": "Tampilan data ulasan aplikasi di Play Store"
+        },
         "<i class='fas fa-chart-pie'></i> Gabungan": {
             "url": "https://dashboard4.streamlit.app",
             "tooltip": "Kombinasi analisis semua platform"
