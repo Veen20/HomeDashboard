@@ -164,7 +164,7 @@ if st.session_state["page"] == "home":
             "tooltip": "Lihat pendapat masyarakat tentang layanan Samsat"
         },
         "<i class='fab fa-youtube'></i> Ulasan YouTube": {
-            "url": "https://dashboard3.streamlit.app",
+            "url": "https://dashboard-q3jztpggw6o.streamlit.app/",
             "tooltip": "Analisis komentar & sentimen di YouTube"
         },
         "<i class='fab fa-google-play'></i> Ulasan Gmaps & Play Store": {
