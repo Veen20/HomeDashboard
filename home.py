@@ -163,7 +163,7 @@ if st.session_state["page"] == "home":
             "url": "https://dashboard1.streamlit.app",
             "tooltip": "Lihat pendapat masyarakat tentang layanan Samsat"
         },
-        "<i class='fab fa-google-play'></i> Ulasan Play Store": {
+        "<i class='fab fa-google-play'></i> Ulasan Gmaps & Play Store": {
             "url": "https://e4ca85lwpgeyxjmxjjab7f.streamlit.app/",
             "tooltip": "Tampilan data ulasan aplikasi di Play Store"
         },
