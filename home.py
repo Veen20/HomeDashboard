@@ -234,7 +234,6 @@ elif st.session_state["page"] == "about":
         st.write("- Nensi Fitriyanti (Mahasiswa Fasilkom Unsri)")
 
     with col2:
-        st.write("")
         st.write("- Resta Gustina (Mahasiswa Fasilkom Unsri)")
         st.write("- Dhea Andheby Saputri (Mahasiswa Fasilkom Unsri)")
 
