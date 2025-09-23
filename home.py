@@ -416,9 +416,53 @@ if st.session_state["page"] == "home":
         unsafe_allow_html=True
     )
 
+# # ==============================
+# # Halaman Tentang
+# # ==============================
+# elif st.session_state["page"] == "about":
+#     st.markdown("""
+#         <div class="title-box">
+#             <h1><i class="material-icons">info</i> Tentang Aplikasi</h1>
+#             <p>Informasi mengenai aplikasi ini, tim pengembang, dan instansi terkait.</p>
+#         </div>
+#     """, unsafe_allow_html=True)
+
+#     st.markdown("### <i class='material-icons'>apps</i> Identitas Aplikasi", unsafe_allow_html=True)
+#     st.write("- **Nama**: Portal Analisis Sentimen Samsat UPTB Palembang 1")
+#     st.write("- **Versi**: 1.0")
+#     st.write("- **Dibuat oleh**: Tim Pengembang Fasilkom Unsri")
+
+#     st.markdown("### <i class='material-icons'>apartment</i> Identitas Instansi", unsafe_allow_html=True)
+#     col1, col2, col3, col4, col5 = st.columns([2,2,2,3,1])
+#     with col1:
+#         st.image("logo unsri.png", caption="Universitas Sriwijaya", width=120)
+#     with col2:
+#         st.image("logo samsat.png", caption="Samsat UPTB Palembang 1", width=120)
+#     with col3:
+#         st.image("logo fasilkom.png", caption="Fasilkom Unsri", width=120)
+
+#     st.markdown("### <i class='material-icons'>people</i> Tim Pengembang", unsafe_allow_html=True)
+#     st.write("Aplikasi ini dikembangkan oleh tim mahasiswa dari Fakultas Ilmu Komputer Universitas Sriwijaya, sebagai bagian dari program magang dan kerja praktek.")
+#     col1, col2 = st.columns(2)
+#     with col1:
+#         st.write("- Peni Ilhami (Mahasiswa Fasilkom Unsri)")
+#         st.write("- Nensi Fitriyanti (Mahasiswa Fasilkom Unsri)")
+
+#     with col2:
+#         st.write("- Resta Gustina (Mahasiswa Fasilkom Unsri)")
+#         st.write("- Dhea Andheby Saputri (Mahasiswa Fasilkom Unsri)")
+
 # ==============================
 # Halaman Tentang
 # ==============================
+# Import Material Icons agar bisa tampil sebagai ikon
+st.markdown(
+    """
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    """,
+    unsafe_allow_html=True
+)
+
 elif st.session_state["page"] == "about":
     st.markdown("""
         <div class="title-box">
@@ -451,3 +495,4 @@ elif st.session_state["page"] == "about":
     with col2:
         st.write("- Resta Gustina (Mahasiswa Fasilkom Unsri)")
         st.write("- Dhea Andheby Saputri (Mahasiswa Fasilkom Unsri)")
+
