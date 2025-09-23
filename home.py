@@ -430,17 +430,16 @@ elif st.session_state["page"] == "about":
     st.markdown("### <i class='fas fa-building'></i> Identitas Instansi", unsafe_allow_html=True)
         
         # Baris logo
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            st.image("logo unsri.png", width=120)
-        with col2:
-            st.image("logo samsat.png", width=120)
-        with col3:
-            st.image("logo fasilkom.png", width=120)
+    col1, col2, col3 = st.columns(3)   
+    with col1:
+        st.image("logo unsri.png", width=120)
+    with col2:
+        st.image("logo samsat.png", width=120)
+    with col3:
+        st.image("logo fasilkom.png", width=120)
         
         # Baris label di bawah logo
-        col_html = """
+    col_html = """
         <div style='display: flex; justify-content: center; gap: 180px; align-items: center; margin-top: -10px;'>
             <div style='text-align: center;'>
                 <p>Universitas Sriwijaya</p>
@@ -453,7 +452,7 @@ elif st.session_state["page"] == "about":
             </div>
         </div>
         """
-        st.markdown(col_html, unsafe_allow_html=True)
+    st.markdown(col_html, unsafe_allow_html=True)
 
     st.markdown("### <i class='fas fa-users'></i> Tim Pengembang", unsafe_allow_html=True)
     st.write("Aplikasi ini dikembangkan oleh tim mahasiswa dari Fakultas Ilmu Komputer Universitas Sriwijaya, sebagai bagian dari program magang dan kerja praktek.")
