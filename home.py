@@ -331,24 +331,6 @@ button:hover {
     margin-top:30px;
     background: rgba(0,0,0,0.5);
 }
-
-/* Logo pojok */
-.top-left-logos, .top-right-logos {
-    position: absolute;
-    top: 15px;
-    display: flex;
-    gap: 15px;
-}
-.top-left-logos {
-    left: 25px;
-}
-.top-right-logos {
-    right: 25px;
-}
-.top-left-logos img, .top-right-logos img {
-    height: 55px;
-    object-fit: contain;
-}
 </style>
 """, unsafe_allow_html=True)
 
@@ -368,27 +350,16 @@ if st.sidebar.button("ℹ️ Tentang"):
     st.session_state["page"] = "about"
 
 # ==============================
-# Header Logo kiri & kanan atas
-# ==============================
-st.markdown("""
-<div class="top-left-logos">
-    <img src="logo unsri.png">
-    <img src="logo fasilkom.png">
-</div>
-
-<div class="top-right-logos">
-    <img src="https://github.com/Veen20/HomeDashboard/blob/main/logo%20samsat.png?raw=true">
-    <img src="logo fakultas.png">
-</div>
-""", unsafe_allow_html=True)
-
-# ==============================
 # Halaman Utama
 # ==============================
 if st.session_state["page"] == "home":
-    col1, col2 = st.columns([1, 8])
+    col1, col2, col3 = st.columns([1, 6, 2])  # kiri, judul, kanan
+    
+    # Logo kiri (Unsri)
     with col1:
         st.image("logo unsri.png", width=100)
+    
+    # Judul
     with col2:
         st.markdown("""
             <div class="title-box">
@@ -396,6 +367,14 @@ if st.session_state["page"] == "home":
                 <p><b>Pilih salah satu dashboard di bawah untuk melihat hasil analisis secara lebih detail.</b></p>
             </div>
         """, unsafe_allow_html=True)
+    
+    # Logo kanan (2 logo sejajar)
+    with col3:
+        colR1, colR2 = st.columns(2)
+        with colR1:
+            st.image("logo samsat.png", width=80)
+        with colR2:
+            st.image("logo fasilkom.png", width=80)
 
     st.markdown("---")
 
@@ -473,6 +452,3 @@ elif st.session_state["page"] == "about":
     with col2:
         st.write("- Resta Gustina (Mahasiswa Fasilkom Unsri)")
         st.write("- Dhea Andheby Saputri (Mahasiswa Fasilkom Unsri)")
-
-
-
