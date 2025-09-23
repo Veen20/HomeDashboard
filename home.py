@@ -434,13 +434,22 @@ elif st.session_state["page"] == "about":
     st.write("- **Dibuat oleh**: Tim Pengembang Fasilkom Unsri")
 
     st.markdown("### <i class='fas fa-building'></i> Identitas Instansi", unsafe_allow_html=True)
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.image("logo unsri.png", caption="Universitas Sriwijaya", width=120)
-    with col2:
-        st.image("logo samsat.png", caption="Samsat UPTB Palembang 1", width=120)
-    with col3:
-        st.image("logo fasilkom.png", caption="Fasilkom Unsri", width=120)
+    st.markdown("""
+    <div style='display: flex; justify-content: center; gap: 40px; align-items: center; margin-top: 20px;'>
+        <div style='text-align: center;'>
+            <img src='logo unsri.png' width='120'><br>
+            <p>Universitas Sriwijaya</p>
+        </div>
+        <div style='text-align: center;'>
+            <img src='logo samsat.png' width='120'><br>
+            <p>Samsat UPTB Palembang 1</p>
+        </div>
+        <div style='text-align: center;'>
+            <img src='logo fasilkom.png' width='120'><br>
+            <p>Fasilkom Unsri</p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
     st.markdown("### <i class='fas fa-users'></i> Tim Pengembang", unsafe_allow_html=True)
     st.write("Aplikasi ini dikembangkan oleh tim mahasiswa dari Fakultas Ilmu Komputer Universitas Sriwijaya, sebagai bagian dari program magang dan kerja praktek.")
@@ -451,4 +460,5 @@ elif st.session_state["page"] == "about":
     with col2:
         st.write("- Resta Gustina (Mahasiswa Fasilkom Unsri)")
         st.write("- Dhea Andheby Saputri (Mahasiswa Fasilkom Unsri)")
+
 
