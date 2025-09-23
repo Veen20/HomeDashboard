@@ -159,7 +159,7 @@ if st.session_state["page"] == "home":
     st.markdown("---")
 
     dashboards = {
-        "<i class='fas fa-map-marked-alt'></i> Analisis Sentimen Ulasan Gmaps": {
+        "<i class='fas fa-map-marked-alt'></i> Ulasan Google Maps": {
             "url": "https://dashboard1.streamlit.app",
             "tooltip": "Lihat pendapat masyarakat tentang layanan Samsat"
         },
